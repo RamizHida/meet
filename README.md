@@ -96,7 +96,5 @@ As a user, I should be able to visualize how many events are taking place in eac
 -Then the user will be shown a chart detailing the quantity of events in various cities   
 
 ## Use of Serverless Functions: ##
-  Meet will make use of serverless functions for multiple features. From helping to properly access the Google Calender API,  
-via auhtorization to live data-processing for displaying information of events to a user for a given city. Through serverless  
-functions, backend processes become streamlined, therefore limiting source code and improving maintainblity, all while ensuring users
-have a good experience while using the app. 
+  Meet will make use of serverless functions for multiple features. From helping to properly access the Google Calender API, via auhtorization to live data-processing for displaying information of events to a user for a given city.  
+Through serverless functions, backend processes become streamlined, therefore limiting source code and improving maintainblity, all while ensuring users have a good experience while using the app. 
