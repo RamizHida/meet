@@ -7,10 +7,10 @@ const Event = ({ event }) => {
   const [detailsShowing, setDetailsShowing] = useState(false);
 
   return (
-    <li>
-      <div>{event.summary}</div>
-      <div>{event.created}</div>
-      <div>{event.location}</div>
+    <li className="event">
+      <h2>{event.summary}</h2>
+      <p>{event.created}</p>
+      <p>{event.location}</p>
 
       {detailsShowing ? (
         <details className="details-opened" open={true}>
@@ -22,7 +22,10 @@ const Event = ({ event }) => {
         </details>
       )}
 
-      <button onClick={() => setDetailsShowing(!detailsShowing)}>
+      <button
+        className="details-btn"
+        onClick={() => setDetailsShowing(!detailsShowing)}
+      >
         {detailsShowing ? 'hide details' : 'show details'}
       </button>
     </li>
