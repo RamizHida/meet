@@ -1,12 +1,21 @@
 import { useState } from 'react';
 
-const NumberOfEvents = ({ setCurrentNOE }) => {
+const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
   const [eventsQuantity, setEventsQuantity] = useState('32');
 
   const handleInputChanged = (e) => {
     const value = e.target.value;
     setEventsQuantity(value);
-    setCurrentNOE(value);
+    // setCurrentNOE(value);
+
+    let errorText;
+    if (value <= 0 || isNaN(value)) {
+      errorText = 'Events must be a postive number';
+    } else {
+      setCurrentNOE(value);
+      errorText = '';
+    }
+    setErrorAlert(errorText);
   };
 
   return (
