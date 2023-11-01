@@ -12,10 +12,6 @@ import {
 const CityEventsChart = ({ allLocations, events }) => {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    setData(getData());
-  }, [`${data}`]);
-
   const getData = () => {
     const data = allLocations.map((location) => {
       const count = events.filter(
@@ -26,6 +22,10 @@ const CityEventsChart = ({ allLocations, events }) => {
     });
     return data;
   };
+
+  useEffect(() => {
+    setData(getData());
+  }, [`${data}`, events]);
 
   return (
     <ResponsiveContainer width="99%" height={400}>
