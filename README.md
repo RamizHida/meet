@@ -1,5 +1,5 @@
 # Meet
-Meet is an serverless, progressive web application (PWA) that displays current events in  
+Meet is a serverless, progressive web application (PWA) that displays current events in  
 the area of your choice with the help of the Google Calender API. Meet was developed using  
 a test-driven development (TDD) approach, via Jest and React Testing Libaray. Meet contains several  
 features, from filtering events by city to using the application while offline.
